@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0.5%;
+        padding: 0;
+        width: 60%;
+        position:absolute;
+        background-attachment: fixed;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .form-container {
+        margin-top: 100px;
+        width: 60%;
+        max-width: 600px;
+        padding: 15px;
+        flex-direction: column;
+        color: #11142e;
+        background-color: rgb(89, 91, 96);
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-left: 10px;
+        display: flexbox;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        border: 2px #676281 solid;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    label {
+        margin-bottom: 10px;
+    }
+
+    input, textarea {
+        width: 96%;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #87d1e2;
+        border-radius: 4px;
+        font-size: 15px;
+        background: #b4c4d5;
+    }
+
+    input:focus, textarea:focus {
+        border-color: #007BFF;
+        outline: none;
+    }
+
+    input::placeholder, textarea::placeholder {
+        color: #aaa;
+    }
+
+    button {
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #273a2b;
+    }
+
+    .contact-info {
+        font-size: 14px;
+        color: #666;
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+
+    .contact-info div {
+        margin: 10px 0;
+        color: #36493b;
+    }
+
+    .contact-info i {
+        margin-right: 10px;
+        color: #dd7330;
+    }
+
+    .mini-game {
+        text-align: right;
+        position:fixed;
+        width: 55%;
+        height: 425px;
+        border: 2px solid rgb(19, 75, 96);
+        border-radius: 10px;
+        box-shadow: 0px 2px 10px #203b5a;
+        overflow:hidden;
+        right: 5px;
+        top:110px;
+    }
+
+    .game-button {
+        background-color: #4b2183f7;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+       position: relative;
+    }
+
+    #game-button:hover {
+        background-color: #141282;
+    }
+    p,p1{
+        color: #28a745;
+        font-size: 12px;
+        margin-top: 8px;
+        line-height: .01cm;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class = "navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            </nav>
+        <div class="box">
+            <div class="vertical-text", style="font-size:medium;"> CONTACT </div>
+        </div>
+    </div>
+    <div class="form-container">
+        <form id="contact-form" action="https://formspree.io/f/xnnqnybw" method="POST" onsubmit="return completeMiniGame()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Enter your message"></textarea>
+            <button type="submit" id="submit-button">Send Message</button>
+        </form>
+    </div>
+<div class="contact-info">
+    <div>
+        <i class="fas fa-phone-alt"></i> <span>+44 (7586623821)</span>
+    </div>
+    <div>
+        <i class="fas fa-envelope"></i> <span>patelmitesh_mba@yahoo.co.uk</span>
+    </div>
+    <div>
+        <i class="fas fa-map-marker-alt"></i> <span>Newcastle Upon Tyne, United Kingdom</span>
+    </div>
+</div>
+<div class="mini-game" id="mini-game">
+    <p>Complete this mini-game to submit the form:</p>
+    <p1>(once button disappered please PRESS send message)</p1>
+    <button onclick="moveButton(this)" id="game-button" class="game-button">Catch Me!</button>
+</div>
+<script src="script.js"></script>   
+</body>
+</html>
+
+
+
+
+
+
+
+
+

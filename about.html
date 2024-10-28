@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display:block;
+            flex-direction: column;
+           
+        }
+        #menu {
+            margin-top: 5%;
+            width: 15%;
+            padding: 4px;
+            position:absolute;
+            height: 50%;
+            box-sizing: border-box;
+        }
+        #content {
+            font-size: 16px;
+            margin-left: 20%;
+            width: 70%;
+            padding: 90px;
+            box-sizing: border-box;
+        }
+        .content-container {
+            display:grid;
+            margin-top: 0%;
+            margin-left:15%;
+            width: 75%;
+            height: 500px;
+            overflow-y: auto;
+            box-shadow: 0 6px 12px rgba(183, 215, 224, 0.5); /* Shadow border */
+            border: none; 
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #4a6f91;
+        }
+        .floating-buttons {
+            position:relative;
+            bottom: 40px;
+            right: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .styled-button {
+            width: 70%;
+            padding: 15px 30px; /* Bigger buttons */
+            font-size: 17px; /* Bigger font size */
+            background-color: #291f93;
+            color: rgb(143, 134, 173);
+            border: none;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+        }
+
+        .styled-button:hover {
+            background-color: #1d0d46; /* Darker blue on hover */
+            transform: scale(1.05); /* Slightly larger on hover */
+        }
+
+        .custome-text {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: rgb(98, 25, 42);
+            text-decoration: underline ;
+        }
+              
+        h2, h3, h4 {
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        .custome-text {
+            margin-left: 0%;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        .margin {
+           margin-right: 0%; /* Margin for table cells */
+        }
+
+        .shadow-table {
+            margin-left: 15%;
+            width: 70%;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow to the table */
+            background: rgb(163, 176, 215);
+        }
+
+        .shadow-table th, .shadow-table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            color: rgba(10, 10, 9, 0.797);
+        }
+        .section {
+            height: 500px; /* Adjust based on your content */
+            padding: 20px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        #aboutMe {
+            background-color: #85bdd5;
+        }
+        #experience {
+            background-color:  #85bdd5;;
+        }
+        #projects {
+            background-color:  #85bdd5;;
+        }
+
+        
+
+    
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <nav class = "navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            </nav>
+        <div class="box">
+            <div class="vertical-text", style="font-size:medium;"> MY PROFESSIONAL STORY </div>
+        </div>
+    </div>
+    <div id="menu">
+        <button class="styled-button" onclick="showContent('aboutMe')">Education</button>
+        <button class="styled-button" onclick="showContent('experience')">Experience</button>
+        <button class="styled-button" onclick="showContent('projects')">Projects</button>
+    </div>
+    <script>
+    function showContent(section) {
+        // Function to show content sections
+        document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
+    }
+    </script>
+
+    <div id="content">
+        <div id="aboutMe" class="content-container">
+            <h2>Education</h2>
+            <ul>
+                <li class="custome-text">Bootcamp in software development</li>
+            </ul>
+            <table class="shadow-table">
+                <tr>
+                    <th class="margin">Skill Category</th>
+                    <th class="margin">Skills</th>
+                </tr>
+                <tr>
+                    <td class="margin">Programming</td>
+                    <td>
+                        1. JavaScript <br>
+                        2. Python <br>
+                        3. MySQL
+                </tr>
+                <tr>
+                    <td class="margin">Web Development</td>
+                    <td>
+                        1. HTML/CSS <br>
+                        2. SQL
+                    </td>
+                </tr>
+                <tr>
+                    <td class="margin">Data Tools</td>
+                    <td>
+                        1. Tableau <br>
+                        2. Spreadsheets
+                    </td>
+                </tr>
+                <tr>
+                    <td class="margin">Analysis</td>
+                    <td>
+                        1. Statistics<br>
+                        2. Visualization
+                    </td>
+                </tr>
+            </table>
+            <ul>
+                <li class="custome-text">MBA (Master of Business Administration)</li>
+            </ul>
+                <tr>
+                    <td class="margin">Marketing</td>
+                </tr>
+                <ul>
+                    <li class="custome-text">BSc (Bachelor of Science)</li>
+                </ul>
+                    <tr>
+                        <td class="margin">Chemistry</td>
+                    </tr>
+
+        </div>
+        <div id="experience" class="content-container" style="display: none;">
+            <h2>Experience:</h2>
+    
+    <h3>Oct 2020 – Present</h3>
+    <h4>Team Member</h4>
+    <p>Royal Mail, Team Valley, Newcastle upon Tyne</p>
+    <ul>
+        <li>Utilized manual tracking methods to ensure accurate and timely collections.</li>
+        <li>Implemented solutions to streamline workflows and reduce operational bottlenecks.</li>
+        <li>Worked closely with team members and other departments to ensure smooth operations.</li>
+        <li>Facilitated team meetings to discuss progress, challenges, and solutions.</li>
+    </ul>
+    
+    <h3>April 2011 – Sep 2020</h3>
+    <h4>Self-Employee</h4>
+    <p>Blueline Taxis, Newcastle upon Tyne</p>
+    <ul>
+        <li>Demonstrated strong problem-solving skills by navigating complex routes and adapting to unexpected situations, showcasing flexibility and quick thinking.</li>
+        <li>Provided excellent customer service and maintained high satisfaction levels through effective communication and a friendly demeanor, enhancing interpersonal skills.</li>
+        <li>Efficiently managed schedules and planned routes to ensure timely pickups and drop-offs, demonstrating strong organizational skills and attention to detail.</li>
+    </ul>
+    
+    <h3>April 2009 – Feb 2011</h3>
+    <h4>Administrative Assistant</h4>
+    <p>Siemens Power Generations (from Adecco), Newcastle</p>
+    <ul>
+        <li>Allocated batch order numbers and generated production process reports using SAP, ensuring accurate tracking and data management.</li>
+        <li>Efficiently recorded production data and identified unusual situations affecting productivity, accuracy, and efficiency, informing team leaders for timely resolution.</li>
+        <li>Produced detailed booklets for manufacturing batches and developed reference quotes for new raw materials, showcasing strong documentation and reporting skills.</li>
+    </ul>
+    
+    <h3>Feb 2006 – Feb 2009</h3>
+    <h4>Administrative Assistant</h4>
+    <p>Rural Payments Agency, Newcastle upon Tyne</p>
+    <ul>
+        <li>Utilized DMUs software and System Traque to accurately log and timestamp all incoming documents and letters, ensuring precise data management and tracking.</li>
+        <li>Compiled and checked DMUs statistics, generating detailed reports for managers and the management team, demonstrating strong analytical and reporting capabilities.</li>
+        <li>Resolved queries from customers and team members using a database management system and worked on the Single Payment Scheme and other farmer-based schemes, showcasing problem-solving skills and customer service expertise.</li>
+    </ul>
+    
+    <h3>Feb 2001 – June 2005</h3>
+    <h4>Pharma Production/Marketing</h4>
+    <p>India</p>
+    <ul>
+        <li>Utilized specialized software for managing production schedules, inventory, and quality control, demonstrating your ability to work with complex systems and data management tools.</li>
+        <li>Analysed production data to identify inefficiencies and implemented process improvements, showcasing your strong analytical skills and ability to solve complex problems.</li>
+        <li>Coordinated marketing campaigns and product launches, ensuring timely delivery and compliance with regulatory standards, highlighting your project management skills and attention to detail.</li>
+        <li>Worked closely with cross-functional teams, including R&D, sales, and regulatory affairs, to ensure successful product development and marketing strategies, demonstrating your ability to collaborate effectively and communicate complex information clearly.
+        </div>
+        <div id="projects" class="content-container" style="display: none;">
+            <h2>Projects</h2>
+            <p> showcase the projects </p>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
+
+
+
